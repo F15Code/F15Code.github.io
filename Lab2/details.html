@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оренда Porsche 911 Carrera S | DriveNow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="index.html">DriveNow</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="index.html#cars">Автопарк</a></li>
+                <li><a href="index.html#terms">Умови</a></li>
+                <li><a href="index.html#about">Про нас</a></li>
+                <li><a href="login.html" class="nav-auth">Увійти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="car-hero"
+        style="background-image: linear-gradient(rgba(15, 17, 21, 0.4), rgba(15, 17, 21, 0.9)), url('https://images.unsplash.com/photo-1503376713259-9e80e920d3a7?q=80&w=2000&auto=format&fit=crop');">
+        <div class="car-hero-content">
+            <span class="car-category">Спорткар</span>
+            <h2>Porsche 911 Carrera S</h2>
+            <div class="quick-specs">
+                <span><i class="fa-solid fa-gauge-high"></i> 3.7 с до 100 км/год</span>
+                <span><i class="fa-solid fa-horse-head"></i> 450 к.с.</span>
+                <span><i class="fa-solid fa-road"></i> 308 км/год макс.</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="details-layout">
+        <div class="car-info-section">
+            <h3>Про автомобіль</h3>
+            <p>Porsche 911 Carrera S — це ікона спортивних автомобілів. Бездоганна керованість, агресивний дизайн та
+                неймовірний звук опозитного двигуна подарують вам незабутні емоції від кожної поїздки. Ідеальний вибір
+                для вікенду, побачення або просто щоб відчути справжній драйв.</p>
+
+            <h3>Комплектація та фішки</h3>
+            <ul class="features-list">
+                <li><i class="fa-solid fa-check"></i> Шкіряний салон (шкіра Nappa, колір Bordeaux Red)</li>
+                <li><i class="fa-solid fa-check"></i> Преміальна аудіосистема Burmester</li>
+                <li><i class="fa-solid fa-check"></i> Спортивна вихлопна система</li>
+                <li><i class="fa-solid fa-check"></i> Панорамний дах</li>
+                <li><i class="fa-solid fa-check"></i> Пакет Sport Chrono (Launch Control)</li>
+                <li><i class="fa-solid fa-check"></i> Apple CarPlay та Android Auto</li>
+            </ul>
+        </div>
+
+        <aside class="booking-sidebar">
+            <div class="booking-card">
+                <div class="price-header">
+                    <span class="price-amount">350$</span>
+                    <span class="price-period">/ доба</span>
+                </div>
+
+                <form action="#" class="booking-form">
+                    <div class="form-group">
+                        <label for="pickup-date"><i class="fa-regular fa-calendar"></i> Дата отримання:</label>
+                        <input type="date" id="pickup-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="return-date"><i class="fa-regular fa-calendar-check"></i> Дата повернення:</label>
+                        <input type="date" id="return-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pickup-location"><i class="fa-solid fa-location-dot"></i> Місце подачі:</label>
+                        <select id="pickup-location">
+                            <option>Офіс (вул. Центральна, 1)</option>
+                            <option>Аеропорт (+$20)</option>
+                            <option>Адресна доставка (+$30)</option>
+                        </select>
+                    </div>
+
+                    <div class="price-total">
+                        <span>Разом:</span>
+                        <span id="total-price">$0</span>
+                    </div>
+
+                    <button type="submit" class="btn btn-full">Забронювати зараз</button>
+                    <p class="form-note">Безкоштовне скасування за 48 годин</p>
+                </form>
+
+                <div id="success-message">
+                    <i class="fa-solid fa-circle-check"></i> Авто успішно заброньовано!
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4 class="footer-logo">DriveNow</h4>
+                <p>Ваш надійний партнер у світі мобільності. Орендуйте комфорт, а не просто автомобіль.</p>
+
+                <div class="social-block">
+                    <h4 class="footer-social-title">Стежити за нами</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Клієнтам</h4>
+                <ul class="footer-links">
+                    <li><a href="#cars"><i class="fas fa-angle-right"></i> Весь автопарк</a></li>
+                    <li><a href="#services"><i class="fas fa-angle-right"></i> Пакетні послуги</a></li>
+                    <li><a href="#rental-terms"><i class="fas fa-angle-right"></i> Правила оренди</a></li>
+                    <li><a href="faq.html"><i class="fas fa-angle-right"></i> Питання та відповіді</a></li>
+                    <li><a href="feedback.html"><i class="fas fa-angle-right"></i> Залишити відгук</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Контакти</h4>
+                <ul class="footer-contacts">
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <span>Гаряча лінія (24/7):</span>
+                            <a href="tel:0800123456">0 800 123 456</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-headset"></i>
+                        <div>
+                            <span>Техпідтримка:</span>
+                            <a href="tel:+380441234567">+38 (044) 123-45-67</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-handshake"></i>
+                        <div>
+                            <span>Відділ партнерства:</span>
+                            <a href="tel:+380671234567">+38 (067) 123-45-67</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:support@drivenow.ua">support@drivenow.ua</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2026 DriveNow Rental. Всі права захищені.</p>
+                <div class="legal-links">
+                    <a href="#">Політика конфіденційності</a>
+                    <a href="#">Публічна оферта</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="Scripts/Details.js"></script>
+</body>
+
+</html>

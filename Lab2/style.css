@@ -1,0 +1,864 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Outfit:wght@400;500;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+:root {
+    --primary-color: rgb(255, 70, 5); 
+    --primary-hover: #e03c00;
+    --dark-bg: #0f1115;
+    --light-bg: #f4f4f6;
+    --text-main: #2d3748;
+    --text-muted: #718096;
+    --card-shadow: 0 15px 35px rgba(250, 70, 5, 0.08);
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    margin: 0;
+    background-color: var(--light-bg);
+    color: var(--text-main);
+}
+
+/*ТИПОГРАФІКА*/
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.5px;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: var(--dark-bg);
+    border-left: 5px solid var(--primary-color);
+    padding-left: 15px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* --- ХЕДЕР ТА МЕНЮ*/
+header {
+    background: rgba(15, 17, 21, 0.95);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+header h1 a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+}
+
+header h1 a:hover{
+    color: var(--primary-color);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+.nav-auth {
+    background: var(--primary-color);
+    color: white !important;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-auth:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 70, 5, 0.3);
+}
+
+/*ГОЛОВНИЙ ЕКРАН*/
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(15, 17, 21, 0.6), rgba(15, 17, 21, 0.9)), url('/F15Code.github.io/Lab2/images/hero.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    color: white;
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #cbd5e1;
+}
+
+/* --- ОСНОВНИЙ КОНТЕНТ --- */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+main section {
+    margin-bottom: 80px;
+    background: white;
+    border-radius: 24px;
+    padding: 50px;
+    box-shadow: var(--card-shadow);
+}
+
+/* --- КАРТКИ АВТО --- */
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.car-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #edf2f7;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.car-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(250, 70, 5, 0.2);
+    border-color: transparent;
+}
+
+.car-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+}
+
+.car-card:hover .car-img {
+    transform: scale(1.03);
+}
+
+.car-info h3 {
+    color: var(--dark-bg);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.car-info p {
+    margin: 8px 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.car-info i {
+    color: var(--primary-color);
+    width: 20px;
+}
+
+.details-link a{
+    color: var(--dark-bg);
+    text-decoration: none;
+}
+
+.details-link a:hover{
+    color: #e03c00;
+}
+
+/* --- КНОПКИ --- */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.btn:hover:not(.disabled) {
+    background: var(--primary-hover);
+    box-shadow: 0 8px 15px rgba(255, 70, 5, 0.25);
+    transform: translateY(-2px);
+}
+
+.disabled {
+    background: #cbd5e1;
+    cursor: not-allowed;
+    color: #64748b;
+}
+
+/* --- УМОВИ ПРОКАТУ --- */
+.terms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.term-item {
+    background: var(--light-bg);
+    padding: 30px 25px;
+    text-align: center;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.term-item:hover {
+    background: white;
+    box-shadow: var(--card-shadow);
+    transform: translateY(-5px);
+}
+
+.term-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* --- ПОСЛУГИ --- */
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #edf2f7;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.service-icon {
+    background: rgba(255, 70, 5, 0.1);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.service-icon i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+/* --- ПРО НАС --- */
+.about-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.map-wrapper {
+    flex: 1;
+}
+
+footer {
+    background-color: #0f172a; 
+    color: #94a3b8;
+    padding: 80px 0 0 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 20px 50px 20px;
+}
+
+.footer-section h4 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.footer-logo {
+    font-size: 1.8rem !important;
+    font-weight: 800;
+    color: var(--primary-color) !important;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.footer-links i {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+.footer-contacts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contacts li {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.footer-contacts i {
+    color: var(--primary-color);
+    margin-top: 4px;
+}
+
+.footer-contacts span {
+    display: block;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.footer-contacts a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.footer-contacts a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    background: #020617;
+    padding: 25px 0;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-bottom-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-links a {
+    color: #475569;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.legal-links a:hover {
+    color: #94a3b8;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #94a3b8;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* --- АДАПТИВНІСТЬ --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 1rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    section {
+        padding: 30px 20px;
+    }
+    
+    .about-container {
+        flex-direction: column;
+    }
+}
+
+
+/*  СТОРІНКА ДЕТАЛЕЙ АВТО (details.html)
+/* Банер конкретного авто */
+.car-hero {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 60px;
+    color: white;
+}
+
+.car-hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.car-category {
+    background: var(--primary-color);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.car-hero-content h2 {
+    font-size: 3.5rem;
+    color: white;
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.quick-specs {
+    display: flex;
+    gap: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.quick-specs i {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+/* Сітка сторінки: Опис + Сайдбар */
+.details-layout {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 40px;
+    padding: 60px 20px;
+    align-items: start;
+}
+
+/* Ліва частина - Опис */
+.car-info-section h3 {
+    font-size: 1.8rem;
+    color: var(--dark-bg);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.car-info-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-main);
+    margin-bottom: 40px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.features-list li {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 500;
+}
+
+.features-list i {
+    color: var(--primary-color);
+    background: rgba(255, 70, 5, 0.1);
+    padding: 8px;
+    border-radius: 50%;
+}
+
+/* Права частина - Картка бронювання  */
+.booking-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.booking-sidebar #success-message{
+     display: none; 
+     color: #10b981; 
+     font-weight: 600; 
+     text-align: center; 
+     margin-top: 15px; 
+     padding: 10px; 
+     background: #d1fae5; 
+     border-radius: 8px;
+}
+
+.booking-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    border-top: 5px solid var(--primary-color);
+}
+
+.price-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.price-amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    color: var(--dark-bg);
+}
+
+.price-period {
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.booking-form .form-group {
+    margin-bottom: 20px;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.booking-form label i {
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #edf2f7;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-main);
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.price-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 25px 0;
+    color: var(--dark-bg);
+}
+
+.btn-full {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+.form-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+/* Адаптивність для сторінки деталей */
+@media (max-width: 992px) {
+    .details-layout {
+        grid-template-columns: 1fr; /* Робимо в одну колонку на планшетах/телефонах */
+    }
+    
+    .booking-sidebar {
+        position: static; /* Відключаємо залипання на мобілках */
+    }
+    
+    .car-hero-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .quick-specs {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.btn-booked {
+    background-color: #10b981 !important;
+    transform: scale(0.95);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5) !important;
+}
+
+/*СТОРІНКА FAQ */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item.active {
+    box-shadow: 0 15px 35px rgba(250, 70, 5, 0.2);
+    transform: translateY(-2px);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-bg);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s;
+    font-family: var(--font-body);
+}
+
+.faq-question:hover {
+    color: var(--primary-color);
+}
+
+.faq-question i {
+    color: var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.faq-answer {
+    display: none; /* За замовчуванням приховано */
+    padding: 0 20px 20px 20px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    border-top: 1px solid #edf2f7;
+    margin-top: 10px;
+    padding-top: 15px;
+}
+
+/*СТОРІНКА ФІТБЕК*/
+.feedback-form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-bg);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 98%;
+    padding: 12px;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+#error-message {
+    color: #dc3545; /* Червоний колір помилки */
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: none;
+}
+
+#comments-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.comment-item {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.comment-item h4 {
+    margin-bottom: 5px;
+    color: var(--dark-bg);
+}
+
+.comment-item span {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.comment-item p {
+    margin-top: 10px;
+    color: #334155;
+    line-height: 1.5;
+}
