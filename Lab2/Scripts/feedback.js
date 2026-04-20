@@ -9,9 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const errorMessage = document.getElementById('error-message');
     const submitBtn = document.getElementById('submitBtn');
 
-    // ==========================================
-    // Ефект наведення через JS + if-else
-    // ==========================================
+    // Ефект наведення через 
     submitBtn.addEventListener('mouseenter', function() {
         // Перевіряємо, чи всі поля заповнені
         if (nameInput.value !== '' && emailInput.value !== '' && commentInput.value !== '') {
@@ -28,9 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.transform = 'scale(1)';
     });
 
-    // ==========================================
-    // ЗАВДАННЯ 3.2 та 3.3: Валідація та додавання
-    // ==========================================
+    // Валідація та додавання
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Зупиняємо перезавантаження сторінки
 
@@ -39,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const emailValue = emailInput.value.trim();
         const commentValue = commentInput.value.trim();
 
-        // Завдання 3.2: if-else для перевірки даних на пустоту
+        //if-else для перевірки даних на пустоту
         if (nameValue === '' || emailValue === '' || commentValue === '') {
             
             errorMessage.style.display = 'block'; // Показуємо текст помилки

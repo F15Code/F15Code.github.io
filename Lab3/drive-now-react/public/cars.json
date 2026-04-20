@@ -1,0 +1,122 @@
+[
+  {
+    "id": "tesla",
+    "title": "Tesla Model 3",
+    "price": 150,
+    "trans": "Автомат",
+    "category": "Електро",
+    "count": 3,
+    "img": "/images/TeslaModel3.avif",
+    "isAvailable": true
+  },
+  {
+    "id": "taycan",
+    "title": "Porsche Taycan Turbo S",
+    "price": 800,
+    "trans": "Автомат",
+    "category": "Електро",
+    "count": 1,
+    "img": "/images/Porsche-Taycan-Turbo-S-001-logo-1200x795.jpg",
+    "isAvailable": true
+  },
+  {
+    "id": "golf",
+    "title": "VW Golf R",
+    "price": 200,
+    "trans": "Бензин",
+    "category": "Спорт",
+    "count": 2,
+    "img": "/images/VW Golf R.avif",
+    "isAvailable": true
+  },
+  {
+    "id": "porsche",
+    "title": "Porsche 911 GT3 RS",
+    "price": 1500,
+    "trans": "Автомат",
+    "category": "Спорт",
+    "count": 1,
+    "img": "/images/porsche-911-gt3-rs.jpg",
+    "isAvailable": true
+  },
+  {
+    "id": "m4",
+    "title": "BMW M4 Competition",
+    "price": 450,
+    "trans": "Автомат",
+    "category": "Спорт",
+    "count": 2,
+    "img": "/images/1-BMW-M4-review-2024-UK.jpg",
+    "isAvailable": true
+  },
+  {
+    "id": "camry",
+    "title": "Toyota Camry",
+    "price": 120,
+    "trans": "Автомат",
+    "category": "Седан",
+    "count": 5,
+    "img": "/images/Toyota Camry.avif",
+    "isAvailable": true
+  },
+  {
+    "id": "sclass",
+    "title": "Mercedes-Benz S-Class",
+    "price": 600,
+    "trans": "Автомат",
+    "category": "Седан",
+    "count": 2,
+    "img": "/images/1-AMG-S63-2024-review.jpg",
+    "isAvailable": true
+  },
+  {
+    "id": "ram",
+    "title": "Ram 1500",
+    "price": 500,
+    "trans": "Автомат",
+    "category": "Позашляховик",
+    "count": 4,
+    "img": "/images/FordRam.jfif",
+    "isAvailable": true
+  },
+  {
+    "id": "g63",
+    "title": "Mercedes G63 AMG",
+    "price": 900,
+    "trans": "Автомат",
+    "category": "Позашляховик",
+    "count": 1,
+    "img": "/images/dsc09539.jpg",
+    "isAvailable": true
+  },
+  {
+    "id": "range",
+    "title": "Range Rover Vogue",
+    "price": 550,
+    "trans": "Автомат",
+    "category": "Позашляховик",
+    "count": 3,
+    "img": "/images/699c37d143f964_57864726.jpg",
+    "isAvailable": true
+  },
+  {
+    "id": "tuktuk",
+    "title": "Тук-тук",
+    "price": 10,
+    "trans": "Механіка",
+    "category": "Екзотика",
+    "count": 2,
+    "img": "/images/tuktuk.jfif",
+    "isAvailable": true
+  },
+  {
+    "id": "vespa",
+    "title": "Vespa Sprint 150",
+    "price": 40,
+    "trans": "Варіатор",
+    "category": "Екзотика",
+    "count": 0,
+    "img": "/images/1280px-Vespa_sprint_150.jpg",
+    "isAvailable": false
+  }
+]

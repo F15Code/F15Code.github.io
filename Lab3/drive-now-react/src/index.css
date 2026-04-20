@@ -111,7 +111,7 @@ nav a:hover {
 
 /*ГОЛОВНИЙ ЕКРАН*/
 .hero {
-    height: 70vh;
+height: 70vh;
     background: linear-gradient(rgba(15, 17, 21, 0.6), rgba(15, 17, 21, 0.9)), url('/images/hero.jpg') center/cover;
     display: flex;
     align-items: center;
@@ -160,10 +160,21 @@ main section {
 /* --- КАРТКИ АВТО --- */
 .cars-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 360px));
+    
     gap: 30px;
+    max-width: 1200px; 
+    margin: 40px auto;
+    
+    justify-content: center; 
 }
 
+@media (max-width: 480px) {
+    .cars-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
 
 .car-card {
     background: white;
@@ -498,6 +509,7 @@ footer {
     .about-container {
         flex-direction: column;
     }
+    
 }
 
 
@@ -507,6 +519,8 @@ footer {
     height: 60vh;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
     display: flex;
     align-items: flex-end;
     padding-bottom: 60px;
@@ -550,6 +564,61 @@ footer {
 .quick-specs i {
     color: var(--primary-color);
     margin-right: 8px;
+}
+
+/* Список локацій */
+.location-select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fcfcfc;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.location-select:focus {
+  border-color: #e63946;
+}
+
+/* Розбивка ціни */
+.price-breakdown {
+  margin-top: 15px;
+  padding: 10px 0;
+  border-top: 1px dashed #ccc;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.price-total span.price-error {
+  color: #e63946;
+  font-size: 1rem;
+}
+
+/* Сповіщення про успіх */
+.success-notification {
+  margin-top: 15px;
+  background: #d4edda;
+  color: #155724;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 4px solid #28a745;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 /* Сітка сторінки: Опис + Сайдбар */
@@ -732,7 +801,21 @@ footer {
     box-shadow: 0 0 15px rgba(16, 185, 129, 0.5) !important;
 }
 
-/*СТОРІНКА FAQ */
+/* СТОРІНКА FAQ */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Контейнер всієї сторінки */
+.faq-page-main {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 0 20px; /* Відступ від країв екрану на мобільних */
+}
+
 .faq-container {
     display: flex;
     flex-direction: column;
@@ -745,50 +828,57 @@ footer {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     overflow: hidden;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
 }
 
 .faq-item.active {
-    box-shadow: 0 15px 35px rgba(250, 70, 5, 0.2);
+    box-shadow: 0 10px 25px rgba(250, 70, 5, 0.15);
     transform: translateY(-2px);
+    border-color: rgba(250, 70, 5, 0.3);
 }
 
 .faq-question {
     width: 100%;
     text-align: left;
-    padding: 20px;
+    padding: 25px 30px; /* Збільшено відступи: 25px зверху/знизу, 30px зліва/справа */
     background: none;
     border: none;
     font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--dark-bg);
+    font-weight: 700;
+    color: #1a1a1a;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
     transition: color 0.3s;
-    font-family: var(--font-body);
 }
 
-.faq-question:hover {
-    color: var(--primary-color);
+.faq-item.active .faq-question {
+    color: #fa4605; /* Твій колір */
 }
 
 .faq-question i {
-    color: var(--primary-color);
-    transition: transform 0.3s;
+    color: #fa4605;
+    transition: transform 0.4s ease;
 }
 
 .faq-answer {
-    display: none; /* За замовчуванням приховано */
-    padding: 0 20px 20px 20px;
-    color: var(--text-muted);
+    padding: 0 30px 25px 30px; /* Відступи зліва/справа (30px) та знизу (25px) */
+    color: #555;
     line-height: 1.6;
-    border-top: 1px solid #edf2f7;
-    margin-top: 10px;
-    padding-top: 15px;
+    animation: fadeIn 0.4s ease-out;
 }
 
+.faq-answer p {
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 /*СТОРІНКА ФІТБЕК*/
 .feedback-form-container {
     background: white;
@@ -862,4 +952,65 @@ footer {
     margin-top: 10px;
     color: #334155;
     line-height: 1.5;
+}
+
+.filters-container {
+    background-color: var(--light-bg);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.filter-group { display: flex; flex-direction: column; gap: 8px; }
+.filter-group label { font-weight: 600; color: var(--dark-bg); }
+.filter-select { padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-family: var(--font-body); }
+
+.btn-outline:hover {
+    background-color: #e63946 !important;
+    color: white !important;
+    transition: 0.3s;
+}
+
+.filter-buttons button {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.star-rating {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.star-rating i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.star-rating i.fa-solid {
+    color: #f59e0b; /* Золотистий для активних зірок */
+}
+
+.star-rating i.fa-regular {
+    color: #cbd5e1; /* Сірий для пустих */
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.stars-display {
+    color: #f59e0b;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 3px;
 }
