@@ -1,0 +1,128 @@
+/*СТОРІНКА ФІТБЕК*/
+.feedback-form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-bg);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 98%;
+    padding: 12px;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+#error-message {
+    color: #dc3545;
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: none;
+}
+
+#comments-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.comment-item {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.comment-item h4 {
+    margin-bottom: 5px;
+    color: var(--dark-bg);
+}
+
+.comment-item span {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.comment-item p {
+    margin-top: 10px;
+    color: #334155;
+    line-height: 1.5;
+}
+
+.star-rating {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.star-rating i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.star-rating i.fa-solid {
+    color: #f59e0b; /* Золотистий для активних зірок */
+}
+
+.star-rating i.fa-regular {
+    color: #cbd5e1; /* Сірий для пустих */
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.stars-display {
+    color: #f59e0b;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 3px;
+}
+
+.comment-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.comment-date {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,130 @@
+/* --- ХЕДЕР ТА МЕНЮ */
+header {
+    background: rgba(15, 17, 21, 0.95);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Логотип */
+.logo {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+}
+
+.logo a:hover {
+    color: var(--primary-color);
+}
+
+/* Навігація */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Секція автентифікації (права частина) */
+.auth-section {
+    display: flex;
+    align-items: center;
+}
+
+/* Стиль для кнопки "Увійти" */
+.nav-auth {
+    background: var(--primary-color);
+    color: white !important;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-auth:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 70, 5, 0.3);
+}
+
+/* Інформація про залогіненого користувача */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-email {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Кнопка "Вийти" (робимо її спокійнішою, щоб не перебивала основну кнопку) */
+.btn-logout {
+    background: transparent;
+    color: #e2e8f0;
+    border: 1px solid #475569;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: white;
+}
+
+
+
+/* Мобільна версія */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 1rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .user-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

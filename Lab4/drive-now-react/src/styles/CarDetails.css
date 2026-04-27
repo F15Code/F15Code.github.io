@@ -1,0 +1,289 @@
+/*  СТОРІНКА ДЕТАЛЕЙ АВТО (details.html)
+/* Банер конкретного авто */
+.car-hero {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 60px;
+    color: white;
+}
+
+.car-hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.car-category {
+    background: var(--primary-color);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.car-hero-content h2 {
+    font-size: 3.5rem;
+    color: white;
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.quick-specs {
+    display: flex;
+    gap: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.quick-specs i {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+/* Список локацій */
+.location-select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fcfcfc;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.location-select:focus {
+  border-color: #e63946;
+}
+
+/* Розбивка ціни */
+.price-breakdown {
+  margin-top: 15px;
+  padding: 10px 0;
+  border-top: 1px dashed #ccc;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.price-total span.price-error {
+  color: #e63946;
+  font-size: 1rem;
+}
+
+/* Сповіщення про успіх */
+.success-notification {
+  margin-top: 15px;
+  background: #d4edda;
+  color: #155724;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 4px solid #28a745;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+/* Ліва частина - Опис */
+.car-info-section h3 {
+    font-size: 1.8rem;
+    color: var(--dark-bg);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.car-info-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-main);
+    margin-bottom: 40px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.features-list li {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 500;
+}
+
+.features-list i {
+    color: var(--primary-color);
+    background: rgba(255, 70, 5, 0.1);
+    padding: 8px;
+    border-radius: 50%;
+}
+
+/* Права частина - Картка бронювання  */
+.booking-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.booking-sidebar #success-message{
+     display: none; 
+     color: #10b981; 
+     font-weight: 600; 
+     text-align: center; 
+     margin-top: 15px; 
+     padding: 10px; 
+     background: #d1fae5; 
+     border-radius: 8px;
+}
+
+.booking-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    border-top: 5px solid var(--primary-color);
+}
+
+.price-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.price-amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    color: var(--dark-bg);
+}
+
+.price-period {
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.booking-form .form-group {
+    margin-bottom: 20px;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.booking-form label i {
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #edf2f7;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-main);
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.price-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 25px 0;
+    color: var(--dark-bg);
+}
+
+.btn-full {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+.form-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+/* Адаптивність для сторінки деталей */
+@media (max-width: 992px) {
+    .details-layout {
+        grid-template-columns: 1fr; 
+    }
+    
+    .booking-sidebar {
+        position: static;
+    }
+    
+    .car-hero-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .quick-specs {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.btn-booked {
+    background-color: #10b981 !important;
+    transform: scale(0.95);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5) !important;
+}
+
+
+/* Сітка сторінки: Опис + Сайдбар */
+.details-layout {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 40px;
+    padding: 60px 20px;
+    align-items: start;
+}

@@ -1,0 +1,132 @@
+/*ГОЛОВНИЙ ЕКРАН*/
+.hero {
+height: 70vh;
+    background: linear-gradient(rgba(15, 17, 21, 0.6), rgba(15, 17, 21, 0.9)), url('/images/hero.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    color: white;
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #cbd5e1;
+}
+
+/* --- УМОВИ ПРОКАТУ --- */
+.terms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.term-item {
+    background: var(--light-bg);
+    padding: 30px 25px;
+    text-align: center;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.term-item:hover {
+    background: white;
+    box-shadow: var(--card-shadow);
+    transform: translateY(-5px);
+}
+
+.term-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* --- ПОСЛУГИ --- */
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #edf2f7;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.service-icon {
+    background: rgba(255, 70, 5, 0.1);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.service-icon i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+/* --- ПРО НАС --- */
+.about-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.map-wrapper {
+    flex: 1;
+}
+
+/* Адаптивність тільки для Home */
+@media (max-width: 480px) {
+    .about-container {
+        flex-direction: column;
+    }
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* --- АДАПТИВНІСТЬ --- */
+@media (max-width: 480px) {    
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+}
+
