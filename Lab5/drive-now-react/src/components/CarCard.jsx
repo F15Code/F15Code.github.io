@@ -65,7 +65,7 @@ function CarCard({ car }) {
     <div className="car-card">
       <div className="car-img-container">
         <img 
-          src={car.img.startsWith('http') ? car.img : `http://localhost:5000${car.img}`} 
+          src={car.img.startsWith('http') ? car.img : `https://f15code-github-io.onrender.com${car.img}`} 
           alt={car.title} 
           className="car-img" 
         />

@@ -110,9 +110,8 @@ const handleSubmit = async (e) => {
         <section 
           className="car-hero" 
           style={{ 
-            // Додаємо адресу сервера http://localhost:5000 перед car.img
             backgroundImage: `linear-gradient(rgba(15, 17, 21, 0.4), rgba(15, 17, 21, 0.9)), 
-            url(${car.img.startsWith('http') ? car.img : `http://localhost:5000${car.img}`})`,
+            url(${car.img.startsWith('http') ? car.img : `https://f15code-github-io.onrender.com${car.img}`})`,
           }}
         >
         <div className="car-hero-content">

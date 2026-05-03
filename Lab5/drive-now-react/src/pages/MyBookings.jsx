@@ -55,7 +55,7 @@ function MyBookings() {
             const isPast = new Date(book.endDate) < today;
             const carImg = book.car.img.startsWith('http') 
               ? book.car.img 
-              : `http://localhost:5000${book.car.img}`;
+              : `https://f15code-github-io.onrender.com${book.car.img}`;
 
             return (
               <div key={book.id} className={`booking-card-item ${isPast ? 'past' : 'active'}`}>
