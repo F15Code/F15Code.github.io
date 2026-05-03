@@ -24,9 +24,9 @@ function App() {
     try {
       // Використовуємо Promise.all для швидкого паралельного завантаження
       const [carsRes, faqRes, reviewsRes] = await Promise.all([
-        fetch('http://localhost:5000/api/cars'),
-        fetch('http://localhost:5000/api/faq'),
-        fetch('http://localhost:5000/api/reviews')
+        fetch('https://f15code-github-io.onrender.com/api/cars'),
+        fetch('https://f15code-github-io.onrender.com/api/faq'),
+        fetch('https://f15code-github-io.onrender.com/api/reviews')
       ]);
 
       const carsData = await carsRes.json();
