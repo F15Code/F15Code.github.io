@@ -1,0 +1,78 @@
+/* СТОРІНКА FAQ */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Контейнер всієї сторінки */
+.faq-page-main {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 0 20px; /* Відступ від країв екрану на мобільних */
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.faq-item.active {
+    box-shadow: 0 10px 25px rgba(250, 70, 5, 0.15);
+    transform: translateY(-2px);
+    border-color: rgba(250, 70, 5, 0.3);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 25px 30px; /* Збільшено відступи: 25px зверху/знизу, 30px зліва/справа */
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    transition: color 0.3s;
+}
+
+.faq-item.active .faq-question {
+    color: #fa4605; /* Твій колір */
+}
+
+.faq-question i {
+    color: #fa4605;
+    transition: transform 0.4s ease;
+}
+
+.faq-answer {
+    padding: 0 30px 25px 30px; /* Відступи зліва/справа (30px) та знизу (25px) */
+    color: #555;
+    line-height: 1.6;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

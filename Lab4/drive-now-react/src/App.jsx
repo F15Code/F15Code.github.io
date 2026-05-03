@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-// 1. Імпортуємо базу даних та потрібні інструменти
 import { db, auth } from './firebase/config'; 
 import { collection, getDocs, query, orderBy  } from 'firebase/firestore'; 
 import { onAuthStateChanged } from 'firebase/auth';
@@ -37,7 +36,7 @@ useEffect(() => {
       const faqSnap = await getDocs(collection(db, "faq"));
       setFaq(faqSnap.docs.map(doc => ({ ...doc.data(), id: doc.id })));
 
-      // 3. Завантаження Відгуків ІЗ СОРТУВАННЯМ (найновіші зверху)
+      // 3. Завантаження Відгуків 
       const q = query(collection(db, "reviews"), orderBy("createdAt", "desc"));
       const reviewsSnap = await getDocs(q); // Використовуємо наш запит q
       setReviews(reviewsSnap.docs.map(doc => ({ ...doc.data(), id: doc.id })));
@@ -61,7 +60,6 @@ useEffect(() => {
     <BrowserRouter>
       <Header user={user} />
 
-      {/* Якщо дані ще вантажаться, показуємо просте повідомлення */}
       {loading ? (
         <div style={{ marginTop: '150px', textAlign: 'center', fontSize: '1.5rem' }}>
           Завантаження даних...

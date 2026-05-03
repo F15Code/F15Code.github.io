@@ -1,0 +1,70 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int        @id @default(autoincrement())
+  email     String     @unique
+  password  String
+  name      String?
+  bookings  Booking[]
+  favorites Favorite[]
+  reviews   Review[]
+}
+
+model Car {
+  id          Int        @id @default(autoincrement())
+  category    String
+  count       Int        @default(1)
+  img         String
+  isAvailable Boolean    @default(true)
+  price       Float
+  title       String
+  trans       String
+  bookings    Booking[]
+  favoritedBy Favorite[]
+}
+
+model Favorite {
+  id     Int  @id @default(autoincrement())
+  userId Int
+  carId  Int
+  car    Car  @relation(fields: [carId], references: [id])
+  user   User @relation(fields: [userId], references: [id])
+
+  @@unique([userId, carId])
+}
+
+model Booking {
+  id         Int      @id @default(autoincrement())
+  startDate  DateTime
+  endDate    DateTime
+  totalPrice Float
+  location   String   
+  carId      Int
+  userId     Int
+  createdAt  DateTime @default(now())
+  
+  car        Car      @relation(fields: [carId], references: [id])
+  user       User     @relation(fields: [userId], references: [id])
+}
+model Review {
+  id        Int      @id @default(autoincrement())
+  rating    Int
+  comment   String
+  userId    Int?
+  name      String
+  createdAt DateTime @default(now())
+  user      User?    @relation(fields: [userId], references: [id])
+}
+
+model FAQ {
+  id       Int    @id @default(autoincrement())
+  question String
+  answer   String
+}

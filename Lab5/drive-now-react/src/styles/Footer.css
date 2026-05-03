@@ -1,0 +1,142 @@
+footer {
+    background-color: #0f172a; 
+    color: #94a3b8;
+    padding: 80px 0 0 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 20px 50px 20px;
+}
+
+.footer-section h4 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.footer-logo {
+    font-size: 1.8rem !important;
+    font-weight: 800;
+    color: var(--primary-color) !important;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.footer-links i {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+.footer-contacts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contacts li {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.footer-contacts i {
+    color: var(--primary-color);
+    margin-top: 4px;
+}
+
+.footer-contacts span {
+    display: block;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.footer-contacts a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.footer-contacts a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    background: #020617;
+    padding: 25px 0;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-bottom-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-links a {
+    color: #475569;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.legal-links a:hover {
+    color: #94a3b8;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #94a3b8;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
