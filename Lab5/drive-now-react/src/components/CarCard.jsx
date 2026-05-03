@@ -13,7 +13,7 @@ function CarCard({ car }) {
     const checkFavoriteStatus = async () => {
       if (userId && car.id) {
         try {
-          const res = await fetch(`http://localhost:5000/api/favorites?userId=${userId}&carId=${car.id}`);
+          const res = await fetch(`https://f15code-github-io.onrender.com/api/favorites?userId=${userId}&carId=${car.id}`);
           const data = await res.json();
           // Якщо сервер повернув запис, значить авто в обраному
           if (data && (Array.isArray(data) ? data.length > 0 : data.id)) {
@@ -43,13 +43,13 @@ function CarCard({ car }) {
     try {
       if (isFavorite) {
         // Видалення
-        await fetch(`http://localhost:5000/api/favorites/${userId}/${car.id}`, { 
+        await fetch(`https://f15code-github-io.onrender.com/api/favorites/${userId}/${car.id}`, { 
           method: 'DELETE' 
         });
         setIsFavorite(false);
       } else {
         // Додавання
-        await fetch(`http://localhost:5000/api/favorites`, {
+        await fetch(`https://f15code-github-io.onrender.com/api/favorites`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ userId, carId: car.id })

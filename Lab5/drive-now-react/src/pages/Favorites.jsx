@@ -18,7 +18,7 @@ function Favorites() {
       }
 
       try {
-        const response = await fetch(`http://localhost:5000/api/favorites?userId=${userId}`);
+        const response = await fetch(`https://f15code-github-io.onrender.com/api/favorites?userId=${userId}`);
         
         if (!response.ok) throw new Error("Помилка завантаження обраного");
 

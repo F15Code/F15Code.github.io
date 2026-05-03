@@ -10,7 +10,7 @@ function MyBookings() {
   useEffect(() => {
     // Завантажуємо дані, тільки якщо користувач авторизований
     if (userId) {
-      fetch(`http://localhost:5000/api/my-bookings?userId=${userId}`)
+      fetch(`https://f15code-github-io.onrender.com/api/my-bookings?userId=${userId}`)
         .then(res => {
           if (!res.ok) throw new Error("Помилка мережі");
           return res.json();
