@@ -2,6 +2,7 @@
   "name": "drive-now-react",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://f15code.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
