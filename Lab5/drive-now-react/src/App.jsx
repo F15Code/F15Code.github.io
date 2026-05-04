@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Cars from './pages/Cars';
@@ -62,7 +62,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <Router>
       {/* Передаємо об'єкт користувача та функцію виходу в Header */}
       <Header user={user} onLogout={handleLogout} />
 
@@ -85,7 +85,7 @@ function App() {
       )}
 
       <Footer />
-    </BrowserRouter>
+    </Router>
   );
 }
 
